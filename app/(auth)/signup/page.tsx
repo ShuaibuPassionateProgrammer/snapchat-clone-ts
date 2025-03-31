@@ -1,11 +1,12 @@
-import React from "react";
+import SignupCard from "./signup-card";
 
 const Signup = () => {
-    return (
-        <div>
-            <h1>Sign Up Page</h1>
-        </div>
-    );
+	return (
+		<>
+			<h1 className='text-2xl font-bold text-center mb-4'>Sign up to SnapNext</h1>
+			<SignupCard />
+		</>
+	);
 };
 
 export default Signup;
