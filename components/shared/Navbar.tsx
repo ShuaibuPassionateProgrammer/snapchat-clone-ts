@@ -6,6 +6,8 @@ import LogoutButton from "./logout-button";
 import { auth } from "@/auth";
 
 const Navbar = () => {
+    const session = await auth();
+
     return (
         <div>
             <h1>Navbar</h1>
