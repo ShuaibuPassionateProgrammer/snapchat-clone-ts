@@ -18,6 +18,16 @@ const Navbar = () => {
 					<Link href={"/chat"}> Chat</Link>
 				</Button>
             </div>
+
+            <div className='flex space-x-2'>
+                <Button className='bg-black text-white rounded-full p-3 text-xs md:text-sm'>Watch tutorial</Button>
+				{!session && (
+					<Button asChild className='bg-black text-white rounded-full p-3 text-xs md:text-sm'>
+						<Link href={"/login"}>Login</Link>
+					</Button>
+				)}
+				{session?.user && <LogoutButton />}
+            </div>
         </header>
     );
 };
