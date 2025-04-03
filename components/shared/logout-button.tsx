@@ -1,4 +1,6 @@
-import React from "react";
+import { LogOut } from "lucide-react";
+import { Button } from "../ui/button";
+import { logoutAction } from "@/lib/actions";
 
 const LogoutButton = () => {
     return (
