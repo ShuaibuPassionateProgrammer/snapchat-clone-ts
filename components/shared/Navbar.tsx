@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <header className='w-full py-4 px-8 flex justify-between items-center'>
-            <h1>Navbar</h1>
+            <Image src='/logo.svg' width={40} height={40} alt='Snapchat logo' className='cursor-pointer' />
         </header>
     );
 };
