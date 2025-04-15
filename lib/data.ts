@@ -6,6 +6,7 @@ import { unstable_noStore as noStore } from "next/cache";
 
 export const getUsersForSidebar = async (authUserId: string) => {
 	noStore();
+	
 	try {
 		const allUsers: IUserDocument[] = await User.find({ _id: { $ne: authUserId } });
 		const usersInfo = await Promise.all(
@@ -44,6 +45,7 @@ export const getUsersForSidebar = async (authUserId: string) => {
 
 export const getUserProfile = async (userId: string) => {
 	noStore();
+	
 	try {
 		await connectToMongoDB();
 		const user: IUserDocument | null = await User.findById(userId);
@@ -57,6 +59,7 @@ export const getUserProfile = async (userId: string) => {
 
 export const getMessages = async (authUserId: string, otherUserId: string) => {
 	noStore();
+	
 	try {
 		await connectToMongoDB();
 
